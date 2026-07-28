@@ -68,28 +68,21 @@ const workbenchData = {
     ]
   },
 
-  // 消费支出
+  // 消费支出（已清空，从0开始）
   expense: {
     title: '消费支出',
-    subtitle: '2026年7月账单',
-    monthTotal: 3280,
+    subtitle: '从今天开始记录',
+    monthTotal: 0,
     monthBudget: 5000,
     categories: [
-      { name: '餐饮', amount: 820, percent: 25, icon: '🍜' },
-      { name: '交通', amount: 350, percent: 11, icon: '🚇' },
-      { name: '购物', amount: 680, percent: 21, icon: '🛍️' },
-      { name: '舞蹈课程', amount: 600, percent: 18, icon: '💃' },
-      { name: '健身', amount: 300, percent: 9, icon: '🏋️' },
-      { name: '其他', amount: 530, percent: 16, icon: '📦' }
+      { name: '餐饮', amount: 0, percent: 0, icon: '🍜' },
+      { name: '交通', amount: 0, percent: 0, icon: '🚇' },
+      { name: '购物', amount: 0, percent: 0, icon: '🛍️' },
+      { name: '舞蹈课程', amount: 0, percent: 0, icon: '💃' },
+      { name: '健身', amount: 0, percent: 0, icon: '🏋️' },
+      { name: '其他', amount: 0, percent: 0, icon: '📦' }
     ],
-    recent: [
-      { date: '07-26', name: '星巴克', category: '餐饮', amount: 38 },
-      { date: '07-25', name: '地铁充值', category: '交通', amount: 100 },
-      { date: '07-25', name: '舞蹈月卡', category: '舞蹈课程', amount: 600 },
-      { date: '07-24', name: '优衣库T恤', category: '购物', amount: 99 },
-      { date: '07-23', name: '外卖晚餐', category: '餐饮', amount: 35 },
-      { date: '07-22', name: '健身私教课', category: '健身', amount: 150 }
-    ]
+    recent: []
   },
 
   // 海报任务
@@ -160,9 +153,9 @@ const workbenchData = {
       ]
     },
     expense: {
-      used: 3280,
+      used: 0,
       budget: 5000,
-      percent: 66
+      percent: 0
     }
   },
 

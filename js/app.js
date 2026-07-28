@@ -500,6 +500,16 @@
       percent: d.total > 0 ? Math.round(c.amount / d.total * 100) : 0
     }));
 
+    // 检查今日是否已有消费记录
+    const todayStr = formatDate();
+    const hasTodayRecord = d.records.some(r => r.date === todayStr);
+    const isLate = new Date().getHours() >= 21;
+    const reminderBanner = !hasTodayRecord
+      ? `<div class="expense-reminder ${isLate ? 'urgent' : ''}">
+          <span>${isLate ? '🔔 今天还没记账！' : '📝 今天还没记录消费'}</span>
+        </div>`
+      : '';
+
     return `
       <div class="page">
         <div class="list-page-wrap">
@@ -514,6 +524,8 @@
               </div>
               <div style="font-size:11px;color:var(--text-faint);margin-top:6px">已用 ${usedPercent}%</div>
             </div>
+
+            ${reminderBanner}
 
             <div class="list-section-title" style="display:flex;justify-content:space-between;align-items:center;">
               <span>分类支出</span>

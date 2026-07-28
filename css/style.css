@@ -788,6 +788,28 @@ body {
 }
 
 /* 消费支出卡片 */
+.expense-reminder {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--gold-faint);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.expense-reminder.urgent {
+  background: rgba(255, 68, 68, 0.1);
+  border-color: rgba(255, 68, 68, 0.3);
+  color: #FF6B6B;
+  animation: reminderPulse 2s ease-in-out infinite;
+}
+@keyframes reminderPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
 .expense-summary {
   display: flex;
   align-items: baseline;
